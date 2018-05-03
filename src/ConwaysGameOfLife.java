@@ -21,6 +21,11 @@ import javax.swing.JTextField;
  *  2. Run the ConwaysGOL.jar to see a demo of the final product.
  */
 
+/* 
+ *  3. Fill in the code under the comments to finish the program.
+ *
+ */
+
 public class ConwaysGameOfLife extends JPanel implements ActionListener{
 	public static final int WIDTH = 700;
 	public static final int HEIGHT = 700;
