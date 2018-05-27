@@ -29,7 +29,7 @@ import javax.swing.JTextField;
 public class ConwaysGameOfLife extends JPanel implements ActionListener{
 	public static final int WIDTH = 700;
 	public static final int HEIGHT = 700;
-	public static final int CELLS_PER_ROW = 350;
+	public static final int CELLS_PER_ROW = 100;
 	
 	private boolean isRunning = false;
 	
@@ -59,7 +59,7 @@ public class ConwaysGameOfLife extends JPanel implements ActionListener{
 		speedField = new JTextField(4);
 		setLayout(new BorderLayout());
 		
-		startStopButton.setText("START");
+		startStopButton.setText("START/STOP");
 		startStopButton.addActionListener(this);
 		randomizeButton.setText("RANDOMIZE");
 		randomizeButton.addActionListener(this);
