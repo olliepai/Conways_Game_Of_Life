@@ -40,7 +40,7 @@ public class WorldPanel extends JPanel implements MouseListener, ActionListener 
 		// make each cell alive or dead randomly
 		for (Cell[] r : cells) {
 			for (Cell c : r) {
-				if (new Random().nextInt(6) == 1) {
+				if (new Random().nextInt(2) == 1) {
 					c.isAlive = true;
 				} else {
 					c.isAlive = false;
@@ -94,7 +94,13 @@ public class WorldPanel extends JPanel implements MouseListener, ActionListener 
 		//iterate through the cells and populate the numLivingNbors array with their neighbors
 		for (int r = 0; r < numLivingNbors.length; r++) {
 			for (int c = 0; c < numLivingNbors[r].length; c++) {
-				cells[r][c].liveOrDie(getLivingNeighbors(c, r));
+				numLivingNbors[r][c]=getLivingNeighbors(c, r);
+			}
+		}
+		
+		for (int r = 0; r < numLivingNbors.length; r++) {
+			for (int c = 0; c < numLivingNbors[r].length; c++) {
+				cells[r][c].liveOrDie(numLivingNbors[r][c]);
 			}
 		}
 		
